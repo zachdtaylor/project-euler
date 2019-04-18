@@ -1,0 +1,35 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath, amsthm, amssymb}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\begin{document}
+\title{Project Euler Proofs}
+\author{Zach Taylor}
+\maketitle
+
+1. $\sum_{k=1}^n{k} = \frac{n*(n+1)}{2}$ for all $n \geq 1$.
+\begin{proof}
+  The formula clearly holds when $n=1$ and $n=2$. Now suppose the formula holds 
+  when $n = m \geq 2$. Then 
+  $$\sum_{k=1}^{m+1}{k} = \sum_{k=1}^m{k} + m + 1 = \frac{m*(m+1)}{2} + m + 1
+  = \frac{(m+1)*(m+2)}{2}$$
+  Thus the formula holds for $n = m + 1$, so by the principle of induction it holds 
+  for all $n \geq 1$.
+\end{proof}
+\bigbreak
+
+2. Let $a, b, c \in \Z$. Then $b \mid a$ and $c \mid a$ if and only if 
+$\text{lcm}(b, c) \mid a$.
+\begin{proof}
+  Set $n = \text{lcm}(b, c)$, and suppose $b \mid a$ and $c \mid a$. By the 
+  division algorithm, $a = pn + r$ for some $p,r \in \Z$, where $0 \leq r < n$. 
+  Thus, since $b \mid a$ and $b \mid n$, we have $b \mid r$. By the same reasoning, we
+  also have $c \mid r$. Since $r$ is a common multiple of $b$ and $c$ and $r < n$,
+  $r$ must be $0$. Thus $a = pn$, that is, $n \mid a$.
+  Conversely, let $k, j \in \Z$ such that $n = kb$ and $n = jc$. Then if
+  $n \mid a$, we have, for some $m \in \Z$, $a = mn = (mk)b = (mj)c$, and thus
+  $c \mid a$ and $b \mid a$.
+\end{proof}
+\end{document}
