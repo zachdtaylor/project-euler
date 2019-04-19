@@ -5,7 +5,7 @@
 \newcommand{\Z}{\mathbb{Z}}
 
 \begin{document}
-\title{Project Euler Proofs}
+\title{Project Euler Theorems}
 \author{Zach Taylor}
 \maketitle
 
@@ -34,6 +34,45 @@ $\text{lcm}(b, c) \mid a$.
 \end{proof}
 \bigbreak
 
-3. Let ${F_n}_0^\inf$ be the sequence of Fibonacci numbers. If $F_k$ is even, then
-so is $F_{k+3}$
+3. Let $a, b \in \Z$. The following hold:
+\begin{itemize}
+  \item If $a$ is odd and $b$ is even, $a + b$ is odd. 
+  \item If $a$ and $b$ are odd, $a + b$ is even.
+\end{itemize}
+\begin{proof}
+  Note that if $a, b \in \Z$ where $a$ is odd and $b$ is even, then
+  $a = 2k + 1$ and $b = 2l$ for $k, l \in \Z$, so $a + b$ = $2(k+l) + 1$ is odd.
+  On the other hand, if both a and b are odd, then we can write $b = 2l + 1$ and
+  $a + b = 2(k + l + 1)$ is even.
+\end{proof}
+\bigbreak
+
+4. Let $\{F_n\}_0^{\infty}$ be the sequence of Fibonacci numbers. If $F_k$ is even, 
+then the next even Fibonacci number is $F_{k+3}$.
+\begin{proof}
+  The first 5 Fibonacci numbers are 1, 2, 3, 5, and 8. Clearly the result holds
+  here, since $F_2 = 2$ is even and $F_{2+3} = F_5 = 8$ is also even. Now suppose
+  that the pattern even, odd, odd, even holds for $F_k$ through $F_{k+3}$.
+  By theorem 3, $F_{k+4} = F_{k+3} + F_{k+2}$ is odd, which implies that
+  $F_{k+5} = F_{k+4} + F_{k+3}$ is odd, which implies that
+  $F_{k+6} = F_{k+5} + F_{k+4}$ is even. Thus the pattern holds for $F_{k+3}$
+  through $F_{k+6}$, so by the priniciple of induction the pattern holds for the
+  entire sequence.
+\end{proof}
+\bigbreak
+
+5. Let $\{E_n\}_1^{\infty}$ be the sequence of even Fibonacci numbers. Then
+$E_n = 4E_{n-1} + E_{n-2}$.
+\begin{proof}
+  If $\{F_n\}_0^{\infty}$ is the Fibonacci sequence,
+  \begin{align*}
+    F_n &= F_{n-1} + F_{n-2}\\
+        &= F_{n-2} + F_{n-3} + F_{n-3} + F_{n-4}\\
+        &= 2F_{n-3} + F_{n-2} + F_{n-4}\\
+        &= 2F_{n-3} + F_{n-3} + F_{n-4} + F_{n-5} + F_{n-6}\\
+        &= 3F_{n-3} + F_{n-4} + F_{n-5} + F_{n-6}\\
+        &= 4F_{n-3} + F_{n-6}
+  \end{align*}
+  Thus, by theorem 4, $E_n = 4E_{n-1} + E_{n-2}$.
+\end{proof}
 \end{document}

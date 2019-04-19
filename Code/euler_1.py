@@ -10,10 +10,10 @@ import time
 Details
 -------
 This algorithm uses the familiar sum formula
-sum_{k=1}^n{k} = \frac{n*(n+1)}{2} (see pf. 1), noting that a number is
-a multiple of both 3 and 5 if and only if it is a multiple of 15 (see pf. 2).
+sum_{k=1}^n{k} = \frac{n*(n+1)}{2} (see thm. 1), noting that a number is
+a multiple of both 3 and 5 if and only if it is a multiple of 15 (see thm. 2).
 
-Proofs: 1, 2.
+Theorems: 1, 2.
 
 Complexity
 ----------
