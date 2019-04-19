@@ -4,7 +4,7 @@
 import math
 import time
 
-"""Calculate the sum of all even Fibonacci numbers less than n = 4 million. 
+"""Calculate the sum of all even Fibonacci numbers less than n = 4 million.
 
 Details
 -------

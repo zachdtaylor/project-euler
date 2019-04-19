@@ -4,7 +4,7 @@
 import math
 import time
 
-"""Calculate the sum of all natural numbers that are multiples of 
+"""Calculate the sum of all natural numbers that are multiples of
 3 or 5 and less than 1000.
 
 Details
@@ -24,10 +24,9 @@ print("Euler problem 1")
 print("Calculating solution...")
 
 start = time.time()
-# Numbers that evenly divide the greatest multiple of 3, 5, and 15 
+# Numbers that evenly divide the greatest multiple of 3, 5, and 15
 # less than 1000, respectively.
 n, m, p = math.floor(1000/3), math.floor(1000/5), math.floor(1000/15)
-
 # Use formula for sum, and subtract sum of multiples of 15, since those
 # were counted twice
 solution = int((3*n*(n+1) + 5*m*(m+1) - 15*p*(p+1))/2)
