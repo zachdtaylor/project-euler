@@ -10,7 +10,7 @@ Details
 -------
 This algorithm uses the fact that the even Fibonacci numbers follow the
 recurrence relation E_n = 4E_{n-1} + E_{n-2} (see thm. 5) combined with
-dynamic programmint to reduce the spacial complexity.
+dynamic programming to reduce the spacial complexity.
 
 Theorems: 3, 4, 5
 
