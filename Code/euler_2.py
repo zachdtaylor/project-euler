@@ -3,6 +3,7 @@
 
 import math
 import time
+import sys
 
 """Calculate the sum of all even Fibonacci numbers less than n = 4 million.
 
@@ -16,7 +17,7 @@ Theorems: 3, 4, 5
 
 Complexity
 ----------
-Temporal: O(n)
+Temporal: O(log(n))
 Spacial: O(1)
 """
 
@@ -31,6 +32,7 @@ while E_3 < 4000000:
   E_1 = E_2
   E_2 = E_3
   E_3 = 4*E_2 + E_1
+  iters += 1
 end = time.time()
 
 print("Finished in {0:.7f} seconds".format(end - start))
