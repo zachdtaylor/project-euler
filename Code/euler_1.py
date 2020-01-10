@@ -21,7 +21,7 @@ This algorithm is O(1) in both temporal and spatial complexity.
 """
 
 print("Euler problem 1")
-n = input("n=")
+n = int(input("n="))
 print("Calculating solution...")
 
 start = time.time()
